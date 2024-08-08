@@ -45,6 +45,8 @@
 !/libs/zopenvr/libs/**
 !/libs/zwin32/bin/x64/*
 
+!/libs/zstbi
+
 # Ignore some special directories
 *zig-cache
 *zig-out
