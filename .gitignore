@@ -46,6 +46,7 @@
 !/libs/zwin32/bin/x64/*
 
 !/libs/zstbi
+!/libs/zwin32
 
 # Ignore some special directories
 *zig-cache

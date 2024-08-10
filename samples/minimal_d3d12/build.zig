@@ -20,10 +20,7 @@ pub fn build(b: *std.Build, options: anytype) *std.Build.Step.Compile {
 
     @import("system_sdk").addLibraryPathsTo(exe);
 
-    const zwin32 = b.dependency("zwin32", .{
-        .target = options.target,
-    });
-    exe.root_module.addImport("zwin32", zwin32.module("root"));
+    exe.root_module.addImport("zwin32", b.dependency("zwin32", .{}).module("root"));
 
     if (builtin.os.tag == .windows or builtin.os.tag == .linux) {
         const compile_shaders = @import("zwin32").addCompileShaders(b, demo_name, .{ .shader_ver = "6_6" });

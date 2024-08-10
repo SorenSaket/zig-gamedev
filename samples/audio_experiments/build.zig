@@ -32,10 +32,7 @@ pub fn build(b: *std.Build, options: anytype) *std.Build.Step.Compile {
     });
     exe.root_module.addImport("zxaudio2", zxaudio2.module("root"));
 
-    const zwin32 = b.dependency("zwin32", .{
-        .target = options.target,
-    });
-    const zwin32_module = zwin32.module("root");
+    const zwin32_module = b.dependency("zwin32", .{}).module("root");
     exe.root_module.addImport("zwin32", zwin32_module);
 
     const zd3d12 = b.dependency("zd3d12", .{

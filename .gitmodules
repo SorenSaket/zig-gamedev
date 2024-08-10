@@ -1,3 +1,6 @@
 [submodule "libs/zstbi"]
 	path = libs/zstbi
 	url = git@github.com:zig-gamedev/zstbi.git
+[submodule "libs/zwin32"]
+	path = libs/zwin32
+	url = git@github.com:zig-gamedev/zwin32.git
